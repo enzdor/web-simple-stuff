@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Simple Stuff</title>
+		<link rel="stylesheet" href="./src/tables.css" />
+		<script src="./dist/bundle.js"></script>
+		<script>
+		</script>
+
+	</head>
+	<body>
+		<header>
+			<h1>Simple Stuff</h1>
+		</header>
+		<main>
+			<div id="options">
+				<label for="pType">Choose a pitch:</label>
+				<br/>
+				<select name="pType" id="pType">
+					<option value="%%">Any</option>
+					<option value="FF">Fastball (4-seam)</option>
+					<option value="SI">Sinker (2-seam)</option>
+					<option value="FC">Cutter</option>
+					<option value="CH">Changeup</option>
+					<option value="FS">Split-Finger</option>
+					<option value="FO">Forkball</option>
+					<option value="SC">Screwball</option>
+					<option value="CU">Curveball</option>
+					<option value="KC">Knuckle Curve</option>
+					<option value="CS">Slow Curve</option>
+					<option value="SL">Slider</option>
+					<option value="ST">Sweeper</option>
+					<option value="SV">Slurve</option>
+					<option value="KN">Knuckleball</option>
+					<option value="EP">Eephus</option>
+					<option value="FA">Other</option>
+					<option value="IN">Intentional Ball</option>
+					<option value="PO">Pitchout</option>
+				</select>
+				<br/>
+				<br/>
+				<label for="nPitches">Minimum number of pitches:</label>
+				<br/>
+				<input type="number" name="nPitches" id="nPitches" value=0 />
+				<br/>
+				<br/>
+				<label for="pName">Pitcher name:</label>
+				<br/>
+				<input type="text" name="pName" id="pName" placeholder="Tungsten Arm O'Doyle" />
+				<br/>
+				<br/>
+				<label for="sortBy">Sort By:</label>
+				<br/>
+				<select name="sortBy" id="sortBy">
+					<option value="pid">Pitcher ID</option>
+					<option value="pn">Pitcher Name</option>
+					<option value="pt">Pitch Type</option>
+					<option value="cmr">Cum RV Allowed</option>
+					<option value="amr">Avg RV Allowed</option>
+					<option value="nobs">Number of Observations</option>
+					<option value="ss">Simple Stuff</option>
+				</select>
+				<select name="direction" id="direction">
+				  <option value="DESC">Ascending</option>
+				  <option value="ASC">Descending</option>
+				</select>
+				<br/>
+				<br/>
+				<button onclick="EntryPoint.load()">Load shit</button>
+				<br/>
+				<br/>
+			</div>
+			<table id="dataTable">
+				<tr>
+					<th>Pitcher ID</th>
+					<th>Pitcher Name</th>
+					<th>Pitch type</th>
+					<th>Cumulative RV Allowed</th>
+					<th>Average RV Allowed</th>
+					<th>Number Thrown</th>
+					<th>Simple Stuff</th>
+				</tr>
+			</table>
+		</main>
+		<footer>
+			<ul>
+				<li><a href="/">Source Code</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
+
