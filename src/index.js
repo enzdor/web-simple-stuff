@@ -6,20 +6,27 @@ const workerUrl = new URL(
 );
 const wasmUrl = new URL("sql.js-httpvfs/dist/sql-wasm.wasm", import.meta.url);
 
-const worker = await createDbWorker(
-	[
-		{
-			from: "inline",
-			config: {
-				serverMode: "full",
-				url: "./with_stuff.sqlite",
-				requestChunkSize: 4096,
+let worker;
+
+try {
+	worker = await createDbWorker(
+		[
+			{
+				from: "inline",
+				config: {
+					serverMode: "full",
+					url: "./with_stuff.sqlite",
+					requestChunkSize: 4096,
+				},
 			},
-		},
-	],
-	workerUrl.toString(),
-	wasmUrl.toString()
-);
+		],
+		workerUrl.toString(),
+		wasmUrl.toString()
+	);
+} catch (e) {
+	console.log(e)
+}
+
 
 
 class EntryPoint {
