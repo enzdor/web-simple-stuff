@@ -48,6 +48,11 @@
 				<input type="text" name="pName" id="pName" placeholder="Tungsten Arm O'Doyle" />
 				<br/>
 				<br/>
+				<label for="pName">Pitcher ID:</label>
+				<br/>
+				<input type="number" name="pId" id="pId" placeholder="425794" />
+				<br/>
+				<br/>
 				<label for="sortBy">Sort By:</label>
 				<br/>
 				<select name="sortBy" id="sortBy">
@@ -65,19 +70,19 @@
 				</select>
 				<br/>
 				<br/>
-				<button onclick="EntryPoint.load()">Load shit</button>
+				<button onclick="EntryPoint.load()">Load</button>
 				<br/>
 				<br/>
 			</div>
 			<table id="dataTable">
 				<tr>
 					<th>Pitcher ID</th>
-					<th>Pitcher Name</th>
-					<th>Pitch type</th>
-					<th>Cumulative RV Allowed</th>
-					<th>Average RV Allowed</th>
-					<th>Number Thrown</th>
-					<th>Simple Stuff</th>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Cum RV</th>
+					<th>Avg RV</th>
+					<th>N</th>
+					<th>SS</th>
 				</tr>
 			</table>
 		</main>

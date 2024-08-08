@@ -34,6 +34,7 @@ class EntryPoint {
 
 		const pitchType = document.getElementById("pType").value
 		const pitcherName = document.getElementById("pName").value
+		const pitcherId = document.getElementById("pId").value
 		let nPitches = document.getElementById("nPitches").value
 		const sortBy = document.getElementById("sortBy").value
 		const direction = document.getElementById("direction").value
@@ -54,8 +55,7 @@ class EntryPoint {
 
 		cleanTable()
 
-		const result = await worker.db.query(`select * from results where pitch_type like '${pitchType}' and n_obs > ${nPitches} and pitcher_name like '%${pitcherName}%' order by ${columns[sortBy]} ${direction}`);
-		console.log(`select * from results where pitch_type like '${pitchType}' and n_obs > ${nPitches} and pitcher_name like '%${pitcherName}%' order by ${columns[sortBy]} ${direction}`)
+		const result = await worker.db.query(`select * from results where pitch_type like '${pitchType}' and n_obs > ${nPitches} and pitcher_name like '%${pitcherName}%' and pitcher_id like '%${pitcherId}%' order by ${columns[sortBy]} ${direction}`);
 
 		for (let i = 0; i < result.length; i++) {
 			newRow(result[i])

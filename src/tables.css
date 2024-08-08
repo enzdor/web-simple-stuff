@@ -2,16 +2,33 @@ html {
   font-family: sans-serif;
 }
 
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: arial;
+}
+
+h1 {
+	margin: 0.5rem;
+}
+
+#options {
+	margin: 1rem;
+}
+
 table {
   border-collapse: collapse;
   border: 2px solid rgb(200,200,200);
   letter-spacing: 1px;
+	margin: 0 0vw 0 0vw;
   font-size: 0.8rem;
+	margin: auto;
 }
 
 td, th {
   border: 1px solid rgb(190,190,190);
-  padding: 10px 20px;
+  padding: 4px 3px;
 }
 
 th {
@@ -30,6 +47,3 @@ tr:nth-child(odd) td {
   background-color: rgb(245,245,245);
 }
 
-caption {
-  padding: 10px;
-}
