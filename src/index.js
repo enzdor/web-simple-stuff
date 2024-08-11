@@ -15,7 +15,7 @@ try {
 				from: "inline",
 				config: {
 					serverMode: "full",
-					url: "/with_stuff.sqlite",
+					url: "/web-simple-stuff/dist/with_stuff.sqlite",
 					requestChunkSize: 4096,
 				},
 			},
